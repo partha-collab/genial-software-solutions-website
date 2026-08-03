@@ -40,32 +40,32 @@
 
 <header>
   <div class="nav-inner">
-    <a href="/" class="logo-mark"><img src="logo.png" alt="Genial Software Solutions"></a>
+    <a href="index.html" class="logo-mark"><img src="logo.png" alt="Genial Software Solutions"></a>
     <nav class="links">
-      <a href="/#services">Services</a>
-      <a href="/#industries">Industries</a>
-      <a href="/#approach">Approach</a>
-      <a href="/#about">About</a>
-      <a href="/#contact">Contact</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#industries">Industries</a>
+      <a href="index.html#approach">Approach</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
     <div class="nav-cta">
-      <a href="/#contact" class="btn btn-primary" style="padding:10px 20px; font-size:13.5px;">Start a Project</a>
+      <a href="index.html#contact" class="btn btn-primary" style="padding:10px 20px; font-size:13.5px;">Start a Project</a>
     </div>
-    <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <section class="svc-hero">
   <div class="wrap">
-    <div class="crumb" style="padding-top:4px; margin-bottom:20px; font-size:13px; color:var(--slate-light);"><a href="/" style="color:var(--blue-600);">Home</a> / <a href="/#services" style="color:var(--blue-600);">Services</a> / EdTech Training</div>
+    <div class="crumb" style="padding-top:4px; margin-bottom:20px; font-size:13px; color:var(--slate-light);"><a href="index.html" style="color:var(--blue-600);">Home</a> / <a href="index.html#services" style="color:var(--blue-600);">Services</a> / EdTech Training</div>
     <div class="svc-hero-grid">
       <div>
         <div class="eyebrow"><img src="bars-mark.png" alt="" style="height:14px; width:auto;"> Training</div>
         <h1>EdTech Training</h1>
         <p class="lead">In the fast-paced world of education technology, compliance and risk management are critical. We offer comprehensive governance, risk, and compliance (GRC) training specifically designed for the edtech industry. Our expert trainers equip your team with the knowledge and skills to navigate regulatory challenges and ensure data security.</p>
         <div class="hero-actions">
-          <a href="/#contact" class="btn btn-primary">Start a Project</a>
-          <a href="/#services" class="btn btn-outline">See All Services</a>
+          <a href="index.html#contact" class="btn btn-primary">Start a Project</a>
+          <a href="index.html#services" class="btn btn-outline">See All Services</a>
         </div>
       </div>
       <div class="svc-hero-img"><img src="svc-edtech.jpg" alt="EdTech Training"></div>
@@ -145,8 +145,8 @@
       <div>
         <h5>Company</h5>
         <ul>
-          <li><a href="/#about">About Us</a></li>
-          <li><a href="/#contact">Contact Us</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
           <li><a href="#">Careers</a></li>
           <li><a href="#">Team</a></li>
         </ul>
@@ -167,6 +167,26 @@
     </div>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var toggle = document.querySelector('.menu-toggle');
+  var links = document.querySelector('nav.links');
+  if (toggle && links) {
+    toggle.addEventListener('click', function () {
+      var isOpen = links.classList.toggle('open');
+      toggle.classList.toggle('active', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+    links.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        links.classList.remove('open');
+        toggle.classList.remove('active');
+      });
+    });
+  }
+});
+</script>
 
 </body>
 </html>
