@@ -136,7 +136,7 @@ section{padding:90px 0;}
 .img-slot .slot-label{font-family:'IBM Plex Mono',monospace; font-size:11px; padding:0 16px; z-index:1;}
 .img-slot .slot-dims{font-size:10.5px; color:var(--slate-light); z-index:1;}
 .hero-img-slot{aspect-ratio:1/1; width:100%;}
-.about-img-slot{aspect-ratio:9/10; width:100%; box-shadow:var(--shadow-md);}
+.about-img-slot{aspect-ratio:1/1; width:100%; box-shadow:var(--shadow-md);}
 .service-img-slot{width:96px; height:72px; border-radius:8px; flex-shrink:0;}
 
 /* PROCESS */
@@ -148,7 +148,7 @@ section{padding:90px 0;}
 .process-step p{font-size:12.5px; color:var(--slate);}
 
 /* IMAGE + TEXT SPLIT */
-.split{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
+.split{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
 .split img{border-radius:var(--radius); box-shadow:var(--shadow-md);}
 .split-text h2{margin-bottom:18px;}
 .split-text p{color:var(--slate); font-size:15px; margin-bottom:14px;}
